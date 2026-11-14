@@ -418,6 +418,89 @@ footer {
   cursor: pointer;
 }
 
+.more-btn {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.more-btn:hover,
+.more-btn:focus-visible {
+  background: var(--ink);
+  color: var(--surface);
+  transform: translateY(-1px);
+}
+
+.service-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 16, 10, 0.58);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  z-index: 50;
+}
+
+.service-modal.open {
+  display: flex;
+}
+
+.service-modal-box {
+  width: min(100%, 520px);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 28px 24px 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.service-modal-box h3 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+}
+
+.service-modal-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-modal-box li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.96rem;
+}
+
+.service-modal-box li:last-child {
+  border-bottom: 0;
+}
+
+.service-modal-box .close-btn {
+  display: block;
+  margin: 18px auto 0;
+  border: 1px solid var(--ink);
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 @media (max-width: 620px) {
   nav .hide {
     display: none;
