@@ -489,6 +489,30 @@ footer {
   line-height: 1.4;
 }
 
+.service-modal-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  gap: 8px;
+}
+
+.service-modal-name {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.service-modal-line {
+  display: block;
+  height: 1px;
+  border-bottom: 1px dotted var(--ink);
+  margin-bottom: 0.35em;
+}
+
+.service-modal-price {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .service-modal-box li:last-child {
   border-bottom: 0;
 }

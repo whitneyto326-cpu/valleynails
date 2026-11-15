@@ -174,7 +174,18 @@ moreButtons.forEach((button) => {
 
     if (serviceModalTitle) serviceModalTitle.textContent = title;
     if (serviceModalList) {
-      serviceModalList.innerHTML = items.map((item) => `<li>${item}</li>`).join('');
+      serviceModalList.innerHTML = items
+        .map((item) => {
+          const [name, price] = item.split(' — ');
+          return `
+            <li class="service-modal-item">
+              <span class="service-modal-name">${name}</span>
+              <span class="service-modal-line"></span>
+              <span class="service-modal-price">${price}</span>
+            </li>
+          `;
+        })
+        .join('');
     }
 
     if (serviceModal) {
